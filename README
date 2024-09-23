@@ -1,16 +1,17 @@
 To create a static library (.a file) from this code, follow these steps:
 
-1. Save the above code in a file, e.g. `hello_world.c`.
-2. Compile the code into an object file:
+1. Compile the code into an object file:
    ```
    gcc -c hello_world.c
    ```
    This will create a `hello_world.o` file.
-3. Create the static library archive:
+2. Create the static library archive:
    ```
    ar rcs libhello_world.a hello_world.o
    ```
    This will create a `libhello_world.a` file, which is the static library.
+
+3. Or simply run `make` within the lib directory
 
 To use this static library in another C program, you would:
 
