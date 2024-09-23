@@ -1,5 +1,5 @@
-.venv/*
-build/*
+.venv
+src/build
 .DS_Store
 *.o
 *.a
