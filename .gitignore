@@ -1,0 +1,7 @@
+.venv/*
+build/*
+.DS_Store
+*.o
+*.a
+*_wrapper.*.so
+*_wrapper.c

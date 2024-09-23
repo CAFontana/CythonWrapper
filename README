@@ -1,0 +1,41 @@
+To create a static library (.a file) from this code, follow these steps:
+
+1. Save the above code in a file, e.g. `hello_world.c`.
+2. Compile the code into an object file:
+   ```
+   gcc -c hello_world.c
+   ```
+   This will create a `hello_world.o` file.
+3. Create the static library archive:
+   ```
+   ar rcs libhello_world.a hello_world.o
+   ```
+   This will create a `libhello_world.a` file, which is the static library.
+
+To use this static library in another C program, you would:
+
+1. Include the header file containing the function declaration.
+2. Link against the static library when compiling the program.
+   ```
+   gcc -o my_program my_program.c -L. -lhello_world
+   ```
+3. Now run your program which should output "Hellow World!" in the console
+   ```
+   ./my_program 
+   ```
+
+To use a C function from a static .a library via Cython:
+
+1. Ensure your python environment is setup correctly.  Inluding that your venv is activated if you are using one and that the version of your venv python matches the one you'll use to run your script.  Make sure you're using python3 rather than python if you have both v2 and v3 of python installed.
+2. Install dependencies.
+   ```
+   pip install -r requirements.txt
+   ```
+3. Use `setup.py` to build your Cython Wrapper.
+   ```
+   python3 setup.py build_ext --inplace
+   ```
+4. Test your wrapper.
+   ```
+   python test_hello_world.py
+   ```
