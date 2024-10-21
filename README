@@ -40,3 +40,6 @@ To use a C function from a static .a library via Cython:
    ```
    python test_hello_world.py
    ```
+
+Relating to pointers:
+The dereference operator* can't be used in Cython. Instead you need to import dereference from the cython.operator module. When you want to access the object at the pointed address, you should write dereference(pointer).

@@ -2,6 +2,6 @@
 #define HELLO_WORLD_H
 
 // static void hello_world_2();
-void hello_world();
+void hello_world(char* person);
 
 #endif

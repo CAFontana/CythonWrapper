@@ -5,8 +5,8 @@
 //     printf("Hello, World 2!\n");
 // }
 
-void hello_world() {
-    printf("Hello, World!\n");
+void hello_world(int age) {
+    printf("Happy %i!\n", age);
 }
 
 
